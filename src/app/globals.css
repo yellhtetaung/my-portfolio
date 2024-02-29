@@ -53,7 +53,93 @@
     * {
         @apply border-border;
     }
+
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html.light .job-position {
+    width: 100%;
+    height: 100%;
+}
+
+html.light .job-position text {
+    animation: lightStroke 6s infinite alternate;
+    stroke-width: 2;
+    stroke: #000000;
+}
+
+@keyframes lightStroke {
+    0% {
+        fill: rgba(0, 0, 0, 0);
+        stroke: rgba(0, 0, 0, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(0, 0, 0, 0);
+        stroke: rgba(0, 0, 0, 1);
+    }
+
+    80% {
+        fill: rgba(0, 0, 0, 0);
+        stroke: rgba(0, 0, 0, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(0, 0, 0, 1);
+        stroke: rgba(0, 0, 0, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+html.dark .job-position {
+    width: 100%;
+    height: 100%;
+}
+
+html.dark .job-position text {
+    animation: darkStroke 6s infinite alternate;
+    stroke-width: 2;
+    stroke: #ffffff;
+}
+
+@keyframes darkStroke {
+    0% {
+        fill: rgba(255, 252, 252, 0);
+        stroke: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(255, 252, 252, 0);
+        stroke: rgba(255, 255, 255, 1);
+    }
+
+    80% {
+        fill: rgba(255, 252, 252, 0);
+        stroke: rgba(255, 255, 255, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(255, 252, 252, 1);
+        stroke: rgba(255, 255, 255, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
     }
 }

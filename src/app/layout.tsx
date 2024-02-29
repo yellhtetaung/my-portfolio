@@ -4,10 +4,14 @@ import './globals.css';
 
 import { cn } from '@/lib/utils';
 
+// import theme-provider
 import { ThemeProvider } from '@/components/theme-provider';
-import NavigationBar from '@/components/custom-components/navigation-bar';
 
-export const fontSans = FontSans({
+// import layout sections
+import NavigationBar from '@/components/custom-components/navigation-bar';
+import Footer from '@/components/custom-components/footer';
+
+const fontSans = FontSans({
     subsets: ['latin'],
     variable: '--font-sans',
 });
@@ -43,6 +47,7 @@ export default function RootLayout({
                 >
                     <NavigationBar />
                     {children}
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

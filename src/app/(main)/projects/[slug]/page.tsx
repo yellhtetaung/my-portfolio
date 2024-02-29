@@ -4,14 +4,26 @@ import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 
 import { projects } from '@/lib/data';
+import { Separator } from '@/components/ui/separator';
 
-export default function Projects() {
+export default function ProjectByTags({ params }: { params: { slug: string } }) {
+    const filterdProjects = projects.filter(project =>
+        project.tag.toLocaleString().toLowerCase().includes(params.slug.toLowerCase())
+    );
+
+    if (filterdProjects.length === 0) {
+        return (
+            <div className='container h-screen flex justify-center items-center mx-auto'>
+                <h1 className='text-2xl'>Comming Soon...</h1>
+            </div>
+        );
+    }
+
     return (
         <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
-            {projects.map(project => (
+            {filterdProjects.map(project => (
                 <Card
                     key={project.title}
                     className='cursor-pointer md:hover:scale-105 transition-all'
@@ -32,7 +44,7 @@ export default function Projects() {
                             {project.tag.map(tag => (
                                 <Badge
                                     key={tag}
-                                    variant={'secondary'}
+                                    variant={tag.toLowerCase() === params.slug.toLowerCase() ? 'default' : 'secondary'}
                                 >
                                     # {tag}
                                 </Badge>
