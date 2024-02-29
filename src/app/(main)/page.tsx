@@ -41,7 +41,18 @@ export default function Home() {
                         >
                             <Link href={'/about'}>About Me</Link>
                         </Button>
-                        <Button size={'lg'}>CV Download</Button>
+                        <Button
+                            size={'lg'}
+                            asChild
+                        >
+                            <Link
+                                href={'/my-resume.pdf'}
+                                target='_blank'
+                                download={true}
+                            >
+                                Download CV
+                            </Link>
+                        </Button>
                     </div>
                 </div>
 
