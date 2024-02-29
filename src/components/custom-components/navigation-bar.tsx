@@ -6,9 +6,11 @@ import { usePathname } from 'next/navigation';
 
 import { ModeToggle } from './toggle-theme';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-
-import { navItems } from '@/config/data';
 import { Button } from '../ui/button';
+
+import { MdMenuOpen } from 'react-icons/md';
+
+import { navItems } from '@/lib/data';
 
 export default function NavigationBar() {
     const pathname = usePathname();
@@ -49,10 +51,11 @@ export default function NavigationBar() {
             <Sheet>
                 <SheetTrigger asChild>
                     <Button
-                        variant='outline'
+                        variant={'outline'}
+                        size={'icon'}
                         className='md:hidden'
                     >
-                        <span>menu</span>
+                        <MdMenuOpen size={25} />
                     </Button>
                 </SheetTrigger>
                 <SheetContent>
