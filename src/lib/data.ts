@@ -19,6 +19,7 @@ import {
     TbBrandGithub,
     TbBrandVscode,
     TbBrandThreejs,
+    TbBrandRedux,
 } from 'react-icons/tb';
 import {
     SiNestjs,
@@ -31,6 +32,7 @@ import {
     SiLinux,
     SiNeovim,
     SiIterm2,
+    SiReactquery,
 } from 'react-icons/si';
 
 export const navItems = [
@@ -59,6 +61,8 @@ export const skills = [
             { title: 'React', icon: TbBrandReact },
             { title: 'React Native', icon: TbBrandReactNative },
             { title: 'Next.js', icon: TbBrandNextjs },
+            { title: 'Redux Toolkit', icon: TbBrandRedux },
+            { title: 'React Query', icon: SiReactquery },
             { title: 'TailwindCSS', icon: TbBrandTailwind },
             { title: 'Bootstrap', icon: TbBrandBootstrap },
             { title: 'Figma', icon: TbBrandFigma },
