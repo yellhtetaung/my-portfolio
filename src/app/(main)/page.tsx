@@ -20,7 +20,7 @@ export default function Home() {
                                 y='50%'
                                 dy='.35em'
                                 textAnchor='middle'
-                                className='text-4xl xl:text-5xl tracking-wider text-center'
+                                className='text-2xl md:text-4xl xl:text-5xl tracking-wider text-center'
                             >
                                 Full Stack Developer
                             </text>
