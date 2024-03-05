@@ -29,8 +29,8 @@ export default function Home() {
 
                     <article className='text-center sm:text-md'>
                         I&apos;m <span className='font-bold'>Ye Htet Aung</span> who is a full stack developer with one
-                        and half year of experience. I&apos;m providing smarter websites and applications. If you can dream it, I
-                        can do it. A perfection of creativity. Always in working.
+                        and half year of experience. I&apos;m providing smarter websites and applications. If you can
+                        dream it, I can do it. A perfection of creativity. Always in working.
                     </article>
 
                     <div className='flex justify-center items-center gap-4 mt-10'>
