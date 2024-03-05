@@ -76,7 +76,7 @@ export const skills = [
         ],
     },
     {
-        title: 'Database & Object Relational Mapping',
+        title: 'Databases & Object Relational Mapping',
         lists: [
             { title: 'MYSQL', icon: TbBrandMysql },
             { title: 'Postgresql', icon: SiPostgresql },

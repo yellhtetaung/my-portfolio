@@ -29,7 +29,7 @@ export default function Home() {
 
                     <article className='text-center sm:text-md'>
                         I&apos;m <span className='font-bold'>Ye Htet Aung</span> who is a full stack developer with one
-                        year of experience. I&apos;m providing smarter websites and applications. If you can dream it, I
+                        and half year of experience. I&apos;m providing smarter websites and applications. If you can dream it, I
                         can do it. A perfection of creativity. Always in working.
                     </article>
 
