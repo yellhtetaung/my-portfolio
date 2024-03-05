@@ -17,8 +17,7 @@
 /build
 
 # misc
-.idea
-.vscode
+/.idea/
 .DS_Store
 *.pem
 

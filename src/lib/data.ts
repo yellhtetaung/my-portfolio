@@ -33,6 +33,8 @@ import {
     SiNeovim,
     SiIterm2,
     SiReactquery,
+    SiPycharm,
+    SiIntellijidea
 } from 'react-icons/si';
 
 export const navItems = [
@@ -96,6 +98,8 @@ export const skills = [
         lists: [
             { title: 'VsCode', icon: TbBrandVscode },
             { title: 'WebStrom', icon: SiWebstorm },
+            {title: 'Pycharm Community Edition', icon: SiPycharm},
+            {title: "IntelliJ IDEA Community Edition", icon: SiIntellijidea},
             { title: 'Postman', icon: SiPostman },
             { title: 'Android Studio', icon: SiAndroidstudio },
             { title: 'Xcode', icon: SiXcode },
