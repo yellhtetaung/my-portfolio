@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         default: 'Ye Htet Aung',
         template: 'Ye Htet Aung | %s',
     },
-    description: 'I\'m Ye Htet Aung, a full stack developer.',
+    description: "I'm Ye Htet Aung, a full stack developer.",
 };
 
 export default function RootLayout({

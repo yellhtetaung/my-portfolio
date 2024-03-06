@@ -58,7 +58,14 @@ export const educations = [
     { school: 'Bright Technology Myanmar', courses: ['Web Essential Course'] },
     {
         school: 'Data Land Technology',
-        courses: ['WDF ( Web Development Foundation )', 'BCJ-1 ( Bootstrap, CSS, JavaScript - Batch 1 )', 'JQuery', 'CSS Animation', 'MYSQL Database Batch - 1', 'JS L2 Batch - 3 ( JavaScript Small Projects )'],
+        courses: [
+            'WDF ( Web Development Foundation )',
+            'BCJ-1 ( Bootstrap, CSS, JavaScript - Batch 1 )',
+            'JQuery',
+            'CSS Animation',
+            'MYSQL Database Batch - 1',
+            'JS L2 Batch - 3 ( JavaScript Small Projects )',
+        ],
     },
 ] as const;
 
