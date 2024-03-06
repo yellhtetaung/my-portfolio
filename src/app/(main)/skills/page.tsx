@@ -25,7 +25,7 @@ export default function Skills() {
                                     key={list.title}
                                     className='flex justify-center items-center border p-5 bg-background hover:bg-foreground hover:text-background rounded-xl cursor-pointer shadow-md gap-3 transition-all'
                                 >
-                                    <list.icon size={35} />
+                                    {list.icon && <list.icon size={35} />}
                                     <span>{list.title}</span>
                                 </div>
                             ))}

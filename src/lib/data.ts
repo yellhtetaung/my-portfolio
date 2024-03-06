@@ -36,6 +36,7 @@ import {
     SiPycharm,
     SiIntellijidea,
 } from 'react-icons/si';
+import { PiCirclesThreePlusFill } from 'react-icons/pi';
 
 export const navItems = [
     { title: 'Home', link: '/' },
@@ -50,6 +51,15 @@ export const socialLinks = [
     { title: 'github', link: 'https://github.com/yellhtetaung', icon: FaGithub },
     { title: 'instagram', link: 'https://www.instagram.com/yehtetaungxzen', icon: FaInstagram },
     { title: 'linkedIn', link: 'https://www.linkedin.com/in/yehtetaungxzen', icon: FaLinkedin },
+] as const;
+
+export const educations = [
+    { school: 'Bago University', courses: ['First Year History Specialization ( Distance )'] },
+    { school: 'Bright Technology Myanmar', courses: ['Web Essential Course'] },
+    {
+        school: 'Data Land Technology',
+        courses: ['WDF ( Web Development Foundation )', 'BCJ-1 ( Bootstrap, CSS, JavaScript - Batch 1 )', 'JQuery', 'CSS Animation', 'MYSQL Database Batch - 1', 'JS L2 Batch - 3 ( JavaScript Small Projects )'],
+    },
 ] as const;
 
 export const skills = [
@@ -68,6 +78,7 @@ export const skills = [
             { title: 'TailwindCSS', icon: TbBrandTailwind },
             { title: 'Bootstrap', icon: TbBrandBootstrap },
             { title: 'Figma', icon: TbBrandFigma },
+            { title: 'Other UI Libraries', icon: PiCirclesThreePlusFill },
         ],
     },
     {

@@ -56,13 +56,13 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='lg:w-1/2 h-full flex justify-center items-center'>
+                <div className='lg:w-1/2 h-full flex justify-center items-center group'>
                     <Image
                         src='/my-image.jpg'
                         width={1920}
                         height={1080}
                         alt='my image'
-                        className='w-[20rem] lg:w-[25rem] h-auto rounded-3xl shadow-xl lg:hover:rotate-12 lg:hover:scale-105 transition-all cursor-pointer'
+                        className='w-[20rem] lg:w-[25rem] h-auto rounded-3xl shadow-xl lg:group-hover:rotate-12 lg:group-hover:scale-105 transition-all'
                     />
                 </div>
             </div>
