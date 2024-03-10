@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import '@/app/globals.css';
 
 import { Button } from '@/components/ui/button';
 
@@ -56,14 +57,18 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='lg:w-1/2 h-full flex justify-center items-center group'>
-                    <Image
-                        src='/my-image.jpg'
-                        width={1920}
-                        height={1080}
-                        alt='my image'
-                        className='w-[20rem] lg:w-[25rem] h-auto rounded-3xl shadow-xl lg:group-hover:rotate-12 lg:group-hover:scale-105 transition-all'
-                    />
+                <div className='lg:w-1/2 h-full flex justify-center items-center'>
+                    <div className='w-[20rem] lg:w-[25rem] h-auto relative group'>
+                        <div className='hidden lg:block before:content[""] before:bg-gradient-to-bl from-green-400 to-blue-500 before:w-full before:h-full before:absolute before:scale-0 before:rounded-3xl before:shadow-2xl lg:group-hover:w-full lg:group-hover:before:-rotate-[10deg] lg:group-hover:before:scale-105 transition-all before:delay-100 before:duration-300'></div>
+                        <div className='hidden lg:block after:content[""] after:bg-gradient-to-tr from-yellow-500 via-pink-500 to-violet-600 after:w-full after:h-full after:absolute after:scale-0 after:rounded-3xl after:shadow-2xl lg:group-hover:w-full lg:group-hover:after:-rotate-[28deg] lg:group-hover:after:scale-105 transition-all  after:delay-75 after:duration-200'></div>
+                        <Image
+                            src='/my-image.jpg'
+                            width={1920}
+                            height={1080}
+                            alt='my image'
+                            className='w-full h-auto rounded-3xl shadow-xl relative lg:group-hover:rotate-12 lg:group-hover:scale-105 lg:group-hover:duration-100 cursor-pointer transition-all'
+                        />
+                    </div>
                 </div>
             </div>
         </section>

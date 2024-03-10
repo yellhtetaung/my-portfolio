@@ -11,7 +11,7 @@ export default function Article() {
                 <h1 className='text-4xl font-bold text-center'>My Articles</h1>
 
                 <div className='w-full h-screen flex justify-center items-center'>
-                    <h1 className='text-2xl font-bold text-center'>Comming Soon...</h1>
+                    <h1 className='text-2xl font-bold text-center'>Coming Soon...</h1>
                 </div>
             </div>
         </div>

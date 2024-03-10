@@ -1,8 +1,7 @@
+import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import CustomTag from '@/components/custom-components/custom-tag';
 
 import { tags } from '@/lib/data';
 
@@ -21,25 +20,15 @@ export default async function ProjectLayout({
                 <h1 className='text-4xl font-bold text-center'>My Projects</h1>
 
                 <div className='w-full flex flex-wrap items-center gap-3 my-10'>
-                    <Button
-                        variant={'secondary'}
-                        size={'sm'}
-                        asChild
-                        className='rounded-full'
-                    >
-                        <Link href={`/projects`}>All</Link>
-                    </Button>
+                    <CustomTag link={'/projects'}>All</CustomTag>
 
                     {tags.map(tag => (
-                        <Button
-                            variant={'secondary'}
-                            size={'sm'}
-                            asChild
-                            className='rounded-full'
-                            key={tag}
+                        <CustomTag
+                            link={`/projects/${tag.link.toLowerCase()}`}
+                            key={tag.title}
                         >
-                            <Link href={`/projects/${tag}`}>{tag.toUpperCase()}</Link>
-                        </Button>
+                            {tag.title.toUpperCase()}
+                        </CustomTag>
                     ))}
                 </div>
 
