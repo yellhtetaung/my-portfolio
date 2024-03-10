@@ -136,7 +136,15 @@ export const skills = [
     },
 ] as const;
 
-export const tags = ['html', 'css', 'javascript', 'typescript', 'next.js', 'react', 'react navtive'];
+export const tags = [
+    { title: 'HTML', link: 'html' },
+    { title: 'CSS', link: 'css' },
+    { title: 'JavaScript', link: 'javascript' },
+    { title: 'TypeScript', link: 'typescript' },
+    { title: 'Next.js', link: 'next.js' },
+    { title: 'React', link: 'react' },
+    { title: 'React Native', link: 'reactnative' },
+];
 
 export const projects = [
     {

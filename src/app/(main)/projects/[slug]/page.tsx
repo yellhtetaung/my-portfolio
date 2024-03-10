@@ -9,21 +9,21 @@ import { projects } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 
 export default function ProjectByTags({ params }: { params: { slug: string } }) {
-    const filterdProjects = projects.filter(project =>
+    const filteredProjects = projects.filter(project =>
         project.tag.toLocaleString().toLowerCase().includes(params.slug.toLowerCase())
     );
 
-    if (filterdProjects.length === 0) {
+    if (filteredProjects.length === 0) {
         return (
             <div className='container h-screen flex justify-center items-center mx-auto'>
-                <h1 className='text-2xl'>Comming Soon...</h1>
+                <h1 className='text-2xl'>Coming Soon...</h1>
             </div>
         );
     }
 
     return (
         <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
-            {filterdProjects.map(project => (
+            {filteredProjects.map(project => (
                 <Card
                     key={project.title}
                     className='cursor-pointer md:hover:scale-105 transition-all'

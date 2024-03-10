@@ -23,7 +23,7 @@ export default function Skills() {
                             {skill.lists.map(list => (
                                 <div
                                     key={list.title}
-                                    className='flex justify-center items-center border p-5 bg-background hover:bg-foreground hover:text-background rounded-xl cursor-pointer shadow-md gap-3 transition-all'
+                                    className='flex justify-center items-center border p-5 bg-background hover:bg-foreground hover:text-background hover:scale-105 rounded-xl cursor-pointer shadow-md gap-3 transition-all'
                                 >
                                     {list.icon && <list.icon size={35} />}
                                     <span>{list.title}</span>
