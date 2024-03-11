@@ -40,6 +40,7 @@ export default function NavigationBar() {
                         href={nav.link}
                         key={nav.title}
                         className={`font-bold ${pathname === nav.link && 'text-teal-500'} hover:text-teal-500 transition-all`}
+                        target={nav.title === 'Articles' ? '_blank' : '_self'}
                     >
                         {nav.title}
                     </Link>

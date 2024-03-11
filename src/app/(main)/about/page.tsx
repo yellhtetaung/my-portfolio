@@ -21,7 +21,7 @@ export default function About() {
                             I think, it is not suitable with me because I like critical thinking, problem solving,
                             innovation, more and more. So, I choose this career which is a developer. In 2020, I started
                             learning about web development, continuously. Now, I can work as a{' '}
-                            <span className='font-bold text-teal-500'>Full Stack Developer</span> with one and half year
+                            <span className='font-bold underline'>Full Stack Developer</span> with one and a half years
                             of experience in designing, developing, and maintaining web applications and mobile
                             applications. I am proficient in{' '}
                             <span className='font-bold'>
