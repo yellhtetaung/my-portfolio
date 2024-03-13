@@ -42,7 +42,8 @@ export const navItems = [
     { title: 'Home', link: '/' },
     { title: 'Skills', link: '/skills' },
     { title: 'Projects', link: '/projects' },
-    { title: 'Articles', link: 'https://yellhtetaung.gitbook.io/react/' },
+    // { title: 'Articles', link: 'https://yellhtetaung.gitbook.io/react/' },
+    { title: 'Articles', link: '/articles' },
     { title: 'Uses', link: '/uses' },
 ] as const;
 
