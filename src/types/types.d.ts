@@ -1,8 +1,13 @@
-export interface Blog {
+export interface Meta {
+    id: string;
     title: string;
-    slug: string;
-    excerpt: any;
-    coverImage: any;
+    author: string;
     date: string;
-    author: any;
+    tags: string[] | undefined;
+    cover: string;
 }
+
+type BlogPost = {
+    meta: Meta;
+    content: ReactElement<any, string | JSXElementConstructor<any>>;
+};

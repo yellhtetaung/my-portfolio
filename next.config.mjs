@@ -4,9 +4,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'images.ctfassets.net',
+                hostname: 'raw.githubusercontent.com',
                 port: '',
-                pathname: '/qu7h5gq9x6r6/**/**/*',
+                pathname: '/yellhtetaung/Articles/main/assets/*',
             },
         ],
     },
