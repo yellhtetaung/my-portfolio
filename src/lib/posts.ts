@@ -16,7 +16,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
             cache: 'no-store',
             headers: {
                 Accept: 'application/vnd.github+json',
-                Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+                Authorization: `Bearer ${process.env.GITHUB_PERSONAL_TOKEN}`,
                 'X-GitHub-Api-Version': '2022-11-28',
             },
         });
@@ -59,7 +59,7 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
         cache: 'no-store',
         headers: {
             Accept: 'application/vnd.github+json',
-            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+            Authorization: `Bearer ${process.env.GITHUB_PERSONAL_TOKEN}`,
             'X-GitHub-Api-Version': '2022-11-28',
         },
     });

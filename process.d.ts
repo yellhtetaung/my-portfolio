@@ -4,6 +4,6 @@ declare namespace NodeJS {
         CONTENTFUL_ACCESS_TOKEN: string;
         CONTENTFUL_SPACE_ID: string;
         GITHUB_IMAGE_URL: string;
-        GITHUB_TOKEN: string;
+        GITHUB_PERSONAL_TOKEN: string;
     }
 }
