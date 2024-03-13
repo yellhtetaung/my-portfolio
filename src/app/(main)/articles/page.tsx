@@ -10,6 +10,20 @@ import { getPostsMeta } from '@/lib/posts';
 export default async function Articles() {
     const files = await getPostsMeta();
 
+    if (!files) {
+        return (
+            <section className='container mx-auto mt-5 mb-28'>
+                <div className='w-full'>
+                    <h1 className='text-4xl font-bold text-center'>My Articles</h1>
+
+                    <div className='container h-screen flex justify-center items-center mt-10'>
+                        <h1 className='text-xl font-bold'>Coming soon...</h1>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
     return (
         <section className='container mx-auto mt-5 mb-28'>
             <div className='w-full'>
