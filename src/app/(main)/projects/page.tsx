@@ -43,17 +43,19 @@ export default function Projects() {
                     <Separator className='my-4' />
 
                     <CardFooter className='flex justify-between items-center'>
-                        <Button
-                            variant={'secondary'}
-                            asChild
-                        >
-                            <Link
-                                href={project.link}
-                                target='_blank'
+                        {project.link && (
+                            <Button
+                                variant={'secondary'}
+                                asChild
                             >
-                                Live Demo
-                            </Link>
-                        </Button>
+                                <Link
+                                    href={project.link}
+                                    target='_blank'
+                                >
+                                    Live Demo
+                                </Link>
+                            </Button>
+                        )}
 
                         <Button variant={'default'}>
                             <Link
