@@ -239,6 +239,27 @@ export const projects = [
         sourceCode: 'https://github.com/yellhtetaung/repohub',
         tag: ['React', 'JavaScript'],
     },
+    {
+        title: 'Burmese Agriculture',
+        image: '/projects/burmese-agriculture.jpg',
+        link: null,
+        sourceCode: 'https://github.com/yellhtetaung/BurmeseAgriculture.git',
+        tag: ['React Native', 'TypeScript', 'React Navigation'],
+    },
+    {
+        title: 'TMDB Movie App',
+        image: '/projects/tmdb-movie-app.jpg',
+        link: null,
+        sourceCode: 'https://github.com/yellhtetaung/TMDbApp.git',
+        tag: ['React Native', 'TypeScript', 'React Navigation', 'TanStack Query', 'Flashlist'],
+    },
+    {
+        title: 'Bagan Map',
+        image: '/projects/bagan-map.jpg',
+        link: null,
+        sourceCode: 'https://github.com/yellhtetaung/BaganMap.git',
+        tag: ['React Native', 'TypeScript', 'React Navigation', 'react native map view'],
+    },
 ] as const;
 
 export const uses = [

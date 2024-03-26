@@ -9,9 +9,13 @@ import { projects } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 
 export default function ProjectByTags({ params }: { params: { slug: string } }) {
-    const filteredProjects = projects.filter(project =>
-        project.tag.toLocaleString().toLowerCase().includes(params.slug.toLowerCase())
-    );
+    const filteredProjects = projects.filter(value => {
+        const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
+
+        if (result) return result;
+
+        return;
+    });
 
     if (filteredProjects.length === 0) {
         return (
@@ -55,17 +59,19 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                     <Separator className='my-4' />
 
                     <CardFooter className='flex justify-between items-center'>
-                        <Button
-                            variant={'secondary'}
-                            asChild
-                        >
-                            <Link
-                                href={project.link}
-                                target='_blank'
+                        {project.link && (
+                            <Button
+                                variant={'secondary'}
+                                asChild
                             >
-                                Live Demo
-                            </Link>
-                        </Button>
+                                <Link
+                                    href={project.link}
+                                    target='_blank'
+                                >
+                                    Live Demo
+                                </Link>
+                            </Button>
+                        )}
 
                         <Button variant={'default'}>
                             <Link
