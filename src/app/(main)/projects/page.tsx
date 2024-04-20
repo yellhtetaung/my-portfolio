@@ -57,14 +57,19 @@ export default function Projects() {
                             </Button>
                         )}
 
-                        <Button variant={'default'}>
-                            <Link
-                                href={project.sourceCode}
-                                target='_blank'
+                        {project.sourceCode && (
+                            <Button
+                                variant={'default'}
+                                asChild
                             >
-                                Source Code
-                            </Link>
-                        </Button>
+                                <Link
+                                    href={project.sourceCode}
+                                    target='_blank'
+                                >
+                                    Source Code
+                                </Link>
+                            </Button>
+                        )}
                     </CardFooter>
                 </Card>
             ))}

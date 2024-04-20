@@ -12,6 +12,8 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
     const filteredProjects = projects.filter(value => {
         const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
 
+        console.log(result);
+
         if (result) return result;
 
         return;
@@ -45,10 +47,14 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                         />
 
                         <div className='w-full flex flex-wrap gap-3 p-3'>
-                            {project.tag.map(tag => (
+                            {project.tag.map((tag: string) => (
                                 <Badge
                                     key={tag}
-                                    variant={tag.toLowerCase() === params.slug.toLowerCase() ? 'default' : 'secondary'}
+                                    variant={
+                                        tag.split(' ').join('').toLowerCase() === params.slug.toLowerCase()
+                                            ? 'default'
+                                            : 'secondary'
+                                    }
                                 >
                                     # {tag}
                                 </Badge>
@@ -59,7 +65,7 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                     <Separator className='my-4' />
 
                     <CardFooter className='flex justify-between items-center'>
-                        {project.link && (
+                        {project.link && project.link !== null && (
                             <Button
                                 variant={'secondary'}
                                 asChild
@@ -73,14 +79,19 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                             </Button>
                         )}
 
-                        <Button variant={'default'}>
-                            <Link
-                                href={project.sourceCode}
-                                target='_blank'
+                        {project.sourceCode && (
+                            <Button
+                                variant={'default'}
+                                asChild
                             >
-                                Source Code
-                            </Link>
-                        </Button>
+                                <Link
+                                    href={project.sourceCode}
+                                    target='_blank'
+                                >
+                                    Source Code
+                                </Link>
+                            </Button>
+                        )}
                     </CardFooter>
                 </Card>
             ))}
