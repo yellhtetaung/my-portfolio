@@ -12,8 +12,6 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
     const filteredProjects = projects.filter(value => {
         const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
 
-        console.log(result);
-
         if (result) return result;
 
         return;
