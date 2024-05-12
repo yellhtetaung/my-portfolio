@@ -22,7 +22,7 @@
         "@vercel/analytics": "^1.2.2",
         "@vercel/speed-insights": "^1.0.10",
         "class-variance-authority": "^0.7.0",
-        "clsx": "^2.1.0",
+        "clsx": "^2.1.1",
         "commitizen": "^4.3.0",
         "commitlint": "^19.2.2",
         "commitlint-config-gitmoji": "^2.3.1",
