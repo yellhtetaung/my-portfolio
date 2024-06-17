@@ -35,6 +35,7 @@ import {
     SiReactquery,
     SiPycharm,
     SiIntellijidea,
+    SiSourcetree,
 } from 'react-icons/si';
 import { PiCirclesThreePlusFill } from 'react-icons/pi';
 
@@ -125,6 +126,7 @@ export const skills = [
             { title: 'Linux', icon: SiLinux },
             { title: 'Neovim', icon: SiNeovim },
             { title: 'Iterm2', icon: SiIterm2 },
+            { title: 'SourceTree', icon: SiSourcetree },
         ],
     },
     {
@@ -263,7 +265,16 @@ export const projects = [
 ] as const;
 
 export const uses = [
-    { title: 'Macbook Pro M1 ( 2020 )', image: '/uses/macbook.jpg', description: 'Laptop computer' },
+    {
+        title: 'Macbook Pro M1 ( 2020 )',
+        image: '/uses/macbook.jpg',
+        description: 'Laptop computer ( RAM 8 GB, Storage 256 GB )',
+    },
+    {
+        title: 'Lenovo Thinkpad T450',
+        image: '/uses/lenovo-thinkpad.jpg',
+        description: 'Laptop computer ( RAM 12 GB, Storage 128 GB )',
+    },
     {
         title: 'Royal Kludge RK 61',
         image: '/uses/keyboard.jpg',
