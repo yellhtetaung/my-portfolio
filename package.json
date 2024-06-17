@@ -10,7 +10,7 @@
         "prepare": "husky",
         "format": "prettier --write .",
         "lint-staged": "lint-staged --config .lintstagedrc",
-        "commit": "cz-customizable"
+        "commit": "git add -A . && cz-customizable && git push"
     },
     "commit": "./node_modules/cz-customizable/standalone.js",
     "dependencies": {
