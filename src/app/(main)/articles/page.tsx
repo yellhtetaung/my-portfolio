@@ -25,7 +25,7 @@ export default async function Articles() {
     }
 
     return (
-        <section className='container mx-auto mt-5 mb-28'>
+        <section className='w-full lg:container mx-auto mt-5 mb-28'>
             <div className='w-full'>
                 <h1 className='text-4xl font-bold text-center'>My Articles</h1>
 

@@ -10,7 +10,7 @@ import { projects } from '@/lib/data';
 
 export default function Projects() {
     return (
-        <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
+        <div className='w-full lg:container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
             {projects.map(project => (
                 <Card
                     key={project.title}
