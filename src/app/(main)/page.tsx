@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
     return (
-        <section className='container mx-auto mt-5'>
+        <section className='w-full lg:container mx-auto mt-5'>
             <div className='w-full lg:h-screen lg:flex justify-between items-center'>
                 <div className='lg:w-1/2 h-full flex flex-col justify-center p-5'>
                     <div className='w-full'>
@@ -21,7 +21,7 @@ export default async function Home() {
                                 y='50%'
                                 dy='.35em'
                                 textAnchor='middle'
-                                className='text-2xl md:text-5xl xl:text-6xl tracking-wider text-center'
+                                className='text-3xl md:text-5xl xl:text-6xl tracking-wider text-center'
                             >
                                 Software Engineer
                             </text>
