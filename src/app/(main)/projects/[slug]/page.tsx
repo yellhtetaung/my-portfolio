@@ -26,7 +26,7 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
     }
 
     return (
-        <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
+        <div className='w-full md:container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
             {filteredProjects.map(project => (
                 <Card
                     key={project.title}

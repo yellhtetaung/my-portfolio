@@ -58,7 +58,7 @@ export default function About() {
                     {experiences.map(experience => (
                         <div
                             key={experience.company}
-                            className='w-10/12 mx-auto mt-10 p-5 cursor-pointer rounded-lg md:hover:bg-background md:hover:shadow-lg md:hover:scale-105 duration-100'
+                            className='w-10/12 mx-auto mt-10 lg:p-5 cursor-pointer rounded-lg lg:hover:bg-background lg:hover:shadow-lg lg:hover:scale-105 duration-100'
                         >
                             <h1 className='text-xl font-bold'>
                                 {experience.position} • {experience.company}
