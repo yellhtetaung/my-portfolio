@@ -9,17 +9,7 @@ export const metadata: Metadata = {
     title: 'Home',
 };
 
-const loadingTime = async () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            return resolve(true);
-        }, 10000);
-    });
-};
-
 export default async function Home() {
-    await loadingTime();
-
     return (
         <section className='container mx-auto mt-5'>
             <div className='w-full lg:h-screen lg:flex justify-between items-center'>
