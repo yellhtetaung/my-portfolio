@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaJava } from 'react-icons/fa';
 import {
     TbBrandTypescript,
     TbBrandHtml5,
@@ -14,11 +14,9 @@ import {
     TbBrandBootstrap,
     TbBrandNextjs,
     TbBrandFigma,
-    TbBrandPython,
     TbBrandGit,
     TbBrandGithub,
     TbBrandVscode,
-    TbBrandThreejs,
     TbBrandRedux,
 } from 'react-icons/tb';
 import {
@@ -68,6 +66,61 @@ export const educations = [
             'MYSQL Database Batch - 1',
             'JS L2 Batch - 3 ( JavaScript Small Projects )',
         ],
+    },
+    { school: 'KMD Institute', courses: ['Level4 Diploma In Computing (L4DC) - NCC Education (UK)'] },
+] as const;
+
+export const experiences = [
+    {
+        company: 'Tech Paradise',
+        position: 'IT Assistant',
+        start_date: '2018',
+        end_date: '2020',
+        description:
+            'I worked as an IT assistant in Tech Paradise for two years. I assisted in the installation, operation, and maintenance of computer networks and communication systems. I provided technical support for hardware and software issues, ensuring minimal downtime and maximum efficiency. I conducted regular system updates and backups to ensure data integrity and security. I collaborated with team members to troubleshoot and resolve network connectivity issues. I managed the inventory of IT equipment and coordinated with vendors for procurement and repairs.',
+        extra_description: null,
+        languages: null,
+    },
+    {
+        company: 'Yoon Han Thar',
+        position: 'Senior Full Stack Developer',
+        start_date: '2022',
+        end_date: 'Feb 2024',
+        description:
+            'I developed web applications using Next.js and mobile applications using React Native. I managed and led various projects as a project manager, ensuring timely delivery and adherence to client specifications. I negotiated with clients to define project requirements, scope, and timelines, fostering strong client relationships. I built and maintained reusable components for future use. I collaborated with cross-functional teams, including designers and backend developers, to deliver high-quality applications. I conducted code reviews and implemented best practices to maintain high standards of code quality and performance. I stayed up-to-date with the latest industry trends and technologies to continuously improve development processes.',
+        extra_description: null,
+        languages: [
+            'HTML & CSS',
+            'JavaScript',
+            'TypeScript',
+            'React',
+            'React Native',
+            'MYSQL',
+            'Next.js',
+            'TailwindCSS',
+            'Bootstrap',
+            'React Native Material UI',
+        ],
+    },
+    {
+        company: 'uab Bank',
+        position: 'React Native Developer',
+        start_date: 'Apr 2024',
+        end_date: null,
+        description:
+            'I’m currently working as a React Native Developer at uab Bank. I developed new features for uabpay and other related applications, including social features and restaurant reservations. I upgraded the React Native version of uabpay, enhancing app performance and compatibility. I focused primarily on implementing and optimizing social features within the app.',
+        extra_description: [
+            {
+                header: 'Key contributions to social features include:',
+                keys: [
+                    'Implemented infinite scrolling for a seamless user experience.',
+                    'Developed dynamic data rendering for each post, ensuring real-time updates.',
+                    'Implemented data encryption and decryption to ensure user data security.',
+                    'Enhanced video buffering capabilities for smooth video playback.',
+                ],
+            },
+        ],
+        languages: ['JavaScript', 'TypeScript', 'React Native'],
     },
 ] as const;
 
@@ -131,11 +184,7 @@ export const skills = [
     },
     {
         title: 'Current Learning',
-        lists: [
-            { title: 'Nest.js', icon: SiNestjs },
-            { title: 'Three.js', icon: TbBrandThreejs },
-            { title: 'Python', icon: TbBrandPython },
-        ],
+        lists: [{ title: 'Java', icon: FaJava }],
     },
 ] as const;
 
@@ -233,6 +282,13 @@ export const projects = [
         link: 'https://promptopia-azure-delta.vercel.app/',
         sourceCode: 'https://github.com/yellhtetaung/nextjs-tutorial',
         tag: ['Next.js', 'TypeScript', 'Mongodb'],
+    },
+    {
+        title: 'Portfolio',
+        image: '/projects/portfolio.png',
+        link: 'https://yehtetaung-dev.vercel.app/',
+        sourceCode: 'https://github.com/yellhtetaung/my-portfolio',
+        tag: ['Next.js', 'TypeScript', 'Shadcn UI', 'TailwindCSS'],
     },
     {
         title: 'RepoHub',
