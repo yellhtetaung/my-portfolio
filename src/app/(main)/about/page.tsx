@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { educations } from '@/lib/data';
+import { educations, experiences } from '@/lib/data';
 
 export const metadata: Metadata = {
     title: 'About',
@@ -43,14 +43,61 @@ export default function About() {
                         >
                             <h1 className='text-xl font-bold'>{education.school}</h1>
 
-                            {education.courses.map(course => (
-                                <ul
-                                    key={course}
-                                    className='my-5 list-disc ml-10'
-                                >
-                                    <li>{course}</li>
+                            <ul className='my-5 list-disc ml-10'>
+                                {education.courses.map(course => (
+                                    <li key={course}>{course}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+
+                <div className='w-full mt-20'>
+                    <h1 className='text-4xl font-bold text-center'>Experience</h1>
+
+                    {experiences.map(experience => (
+                        <div
+                            key={experience.company}
+                            className='w-10/12 mx-auto mt-10 p-5 cursor-pointer rounded-lg md:hover:bg-background md:hover:shadow-lg md:hover:scale-105 duration-100'
+                        >
+                            <h1 className='text-xl font-bold'>
+                                {experience.position} • {experience.company}
+                            </h1>
+                            <span>
+                                {experience.start_date} - {experience.end_date ? experience.end_date : 'Present'}
+                            </span>
+
+                            <div className='mt-3'>
+                                <article className='text-justify'>{experience.description}</article>
+
+                                {experience.extra_description &&
+                                    experience.extra_description.map(extra_description => (
+                                        <div
+                                            key={extra_description.header}
+                                            className='mt-5'
+                                        >
+                                            <p>{extra_description.header}</p>
+                                            <ul className='list-disc ml-5'>
+                                                {extra_description.keys.map(extra_data => (
+                                                    <li key={extra_data}>{extra_data}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
+                            </div>
+
+                            {experience.languages && (
+                                <ul className='w-full flex flex-wrap gap-3 py-4'>
+                                    {experience.languages.map(language => (
+                                        <li
+                                            key={language}
+                                            className='bg-slate-200 p-2 px-4 text-sm rounded-full cursor-pointer dark:bg-slate-800'
+                                        >
+                                            {language.toString()}
+                                        </li>
+                                    ))}
                                 </ul>
-                            ))}
+                            )}
                         </div>
                     ))}
                 </div>

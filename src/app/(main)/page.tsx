@@ -23,7 +23,7 @@ export default function Home() {
                                 textAnchor='middle'
                                 className='text-2xl md:text-4xl xl:text-5xl tracking-wider text-center'
                             >
-                                Full Stack Developer
+                                Software Engineer
                             </text>
                         </svg>
                     </div>
@@ -62,7 +62,7 @@ export default function Home() {
                         <div className='hidden lg:block before:content[""] before:bg-gradient-to-bl from-green-400 to-blue-500 before:w-full before:h-full before:absolute before:scale-0 before:rounded-3xl before:shadow-2xl lg:group-hover:w-full lg:group-hover:before:-rotate-[10deg] lg:group-hover:before:scale-105 transition-all before:delay-100 before:duration-300'></div>
                         <div className='hidden lg:block after:content[""] after:bg-gradient-to-tr from-yellow-500 via-pink-500 to-violet-600 after:w-full after:h-full after:absolute after:scale-0 after:rounded-3xl after:shadow-2xl lg:group-hover:w-full lg:group-hover:after:-rotate-[28deg] lg:group-hover:after:scale-105 transition-all  after:delay-75 after:duration-200'></div>
                         <Image
-                            src='/my-image.jpg'
+                            src='/my-image-2.jpg'
                             width={1920}
                             height={1080}
                             alt='my image'
