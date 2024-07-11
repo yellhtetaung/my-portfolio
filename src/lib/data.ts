@@ -20,7 +20,6 @@ import {
     TbBrandRedux,
 } from 'react-icons/tb';
 import {
-    SiNestjs,
     SiExpress,
     SiWebstorm,
     SiPostgresql,

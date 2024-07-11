@@ -1,3 +1,4 @@
+import React from 'react';
 import { Inter as FontSans } from 'next/font/google';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
@@ -51,6 +52,7 @@ export default function RootLayout({
                     {children}
                     <Footer />
                 </ThemeProvider>
+
                 <SpeedInsights />
                 <Analytics />
             </body>

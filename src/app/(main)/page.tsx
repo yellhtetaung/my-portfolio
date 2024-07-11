@@ -9,19 +9,29 @@ export const metadata: Metadata = {
     title: 'Home',
 };
 
-export default function Home() {
+const loadingTime = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            return resolve(true);
+        }, 10000);
+    });
+};
+
+export default async function Home() {
+    await loadingTime();
+
     return (
         <section className='container mx-auto mt-5'>
             <div className='w-full lg:h-screen lg:flex justify-between items-center'>
                 <div className='lg:w-1/2 h-full flex flex-col justify-center p-5'>
-                    <div>
+                    <div className='w-full'>
                         <svg className='job-position'>
                             <text
                                 x='50%'
                                 y='50%'
                                 dy='.35em'
                                 textAnchor='middle'
-                                className='text-2xl md:text-4xl xl:text-5xl tracking-wider text-center'
+                                className='text-2xl md:text-5xl xl:text-6xl tracking-wider text-center'
                             >
                                 Software Engineer
                             </text>
@@ -29,9 +39,9 @@ export default function Home() {
                     </div>
 
                     <article className='text-center sm:text-md'>
-                        I&apos;m <span className='font-bold'>Ye Htet Aung</span> who is a full stack developer with one
-                        and a half years of experience. I&apos;m providing smarter websites and applications. If you can
-                        dream it, I can do it. A perfection of creativity. Always in working.
+                        I&apos;m <span className='font-bold'>Ye Htet Aung</span> who is a full stack developer with
+                        almost three years of experience. I&apos;m providing smarter websites and applications. If you
+                        can dream it, I can do it. A perfection of creativity. Always in working.
                     </article>
 
                     <div className='flex justify-center items-center gap-4 mt-10'>
@@ -67,6 +77,7 @@ export default function Home() {
                             height={1080}
                             alt='my image'
                             className='w-full h-auto rounded-3xl shadow-xl relative lg:group-hover:rotate-12 lg:group-hover:scale-105 lg:group-hover:duration-100 cursor-pointer transition-all'
+                            priority
                         />
                     </div>
                 </div>
