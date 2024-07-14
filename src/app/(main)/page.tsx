@@ -23,7 +23,7 @@ export default async function Home() {
                                 textAnchor='middle'
                                 className='text-3xl md:text-5xl xl:text-6xl tracking-wider text-center'
                             >
-                                Software Engineer
+                                Full Stack Developer
                             </text>
                         </svg>
                     </div>
