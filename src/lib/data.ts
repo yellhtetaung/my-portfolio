@@ -18,6 +18,8 @@ import {
     TbBrandGithub,
     TbBrandVscode,
     TbBrandRedux,
+    TbBrandVisualStudio,
+    TbBrandCSharp,
 } from 'react-icons/tb';
 import {
     SiExpress,
@@ -33,6 +35,7 @@ import {
     SiPycharm,
     SiIntellijidea,
     SiSourcetree,
+    SiKotlin,
 } from 'react-icons/si';
 import { PiCirclesThreePlusFill } from 'react-icons/pi';
 
@@ -168,7 +171,8 @@ export const skills = [
     {
         title: 'IDE & Tools',
         lists: [
-            { title: 'VsCode', icon: TbBrandVscode },
+            { title: 'Visual Studio Code', icon: TbBrandVscode },
+            { title: 'Visual Studio', icon: TbBrandVisualStudio },
             { title: 'WebStrom', icon: SiWebstorm },
             { title: 'Pycharm Community Edition', icon: SiPycharm },
             { title: 'IntelliJ IDEA Community Edition', icon: SiIntellijidea },
@@ -183,7 +187,11 @@ export const skills = [
     },
     {
         title: 'Current Learning',
-        lists: [{ title: 'Java', icon: FaJava }],
+        lists: [
+            { title: 'Java', icon: FaJava },
+            { title: 'C Sharp', icon: TbBrandCSharp },
+            { title: 'Kotlin', icon: SiKotlin },
+        ],
     },
 ] as const;
 
