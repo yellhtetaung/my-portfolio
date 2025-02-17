@@ -62,14 +62,14 @@ export const educations = [
         school: 'Data Land Technology',
         courses: [
             'WDF ( Web Development Foundation )',
-            'BCJ-1 ( Bootstrap, CSS, JavaScript - Batch 1 )',
+            'BCJ ( Bootstrap, CSS, JavaScript )',
             'JQuery',
             'CSS Animation',
-            'MYSQL Database Batch - 1',
-            'JS L2 Batch - 3 ( JavaScript Small Projects )',
+            'Database ( MySQL )',
+            'JS L2 ( JavaScript Small Projects )',
         ],
     },
-    { school: 'KMD Institute', courses: ['Level4 Diploma In Computing (L4DC) - NCC Education (UK)'] },
+    { school: 'KMD Institute', courses: ['Level4 Diploma In Computing (L4DC) • NCC Education (UK)'] },
 ] as const;
 
 export const experiences = [
@@ -302,28 +302,35 @@ export const projects = [
         image: '/projects/repohub.png',
         link: 'https://repohub-pi.vercel.app/',
         sourceCode: 'https://github.com/yellhtetaung/repohub',
-        tag: ['React', 'JavaScript'],
+        tag: ['HTML', 'CSS', 'JavaScript', 'React'],
     },
     {
         title: 'Burmese Agriculture',
         image: '/projects/burmese-agriculture.jpg',
         link: null,
         sourceCode: 'https://github.com/yellhtetaung/BurmeseAgriculture.git',
-        tag: ['React Native', 'TypeScript', 'React Navigation'],
+        tag: ['React Native', 'TypeScript'],
     },
     {
         title: 'TMDB Movie App',
         image: '/projects/tmdb-movie-app.jpg',
         link: null,
         sourceCode: 'https://github.com/yellhtetaung/TMDbApp.git',
-        tag: ['React Native', 'TypeScript', 'React Navigation', 'TanStack Query', 'Flashlist'],
+        tag: ['React Native', 'TypeScript'],
     },
     {
         title: 'Bagan Map',
         image: '/projects/bagan-map.jpg',
         link: null,
         sourceCode: 'https://github.com/yellhtetaung/BaganMap.git',
-        tag: ['React Native', 'TypeScript', 'React Navigation', 'react native map view'],
+        tag: ['React Native', 'TypeScript'],
+    },
+    {
+        title: 'Standing Desk',
+        image: '/projects/standing-desk.png',
+        link: 'https://standing-desk-pi.vercel.app/',
+        sourceCode: null,
+        tag: ['HTML', 'CSS'],
     },
 ] as const;
 
