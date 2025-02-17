@@ -9,13 +9,15 @@ import { projects } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 
 export default function ProjectByTags({ params }: { params: { slug: string } }) {
-    const filteredProjects = projects.filter(value => {
-        const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
+    const filteredProjects = projects
+        .filter(value => {
+            const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
 
-        if (result) return result;
+            if (result) return result;
 
-        return;
-    });
+            return;
+        })
+        .sort((a, b) => a.title.localeCompare(b.title));
 
     if (filteredProjects.length === 0) {
         return (

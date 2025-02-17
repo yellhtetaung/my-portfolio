@@ -9,9 +9,11 @@ import { Separator } from '@/components/ui/separator';
 import { projects } from '@/lib/data';
 
 export default function Projects() {
+    const sortedProjects = [...projects].sort((a, b) => a.title.localeCompare(b.title));
+
     return (
         <div className='w-full lg:container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
-            {projects.map(project => (
+            {sortedProjects.map(project => (
                 <Card
                     key={project.title}
                     className='cursor-pointer md:hover:scale-105 transition-all'
