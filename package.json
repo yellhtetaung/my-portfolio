@@ -24,7 +24,7 @@
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "commitizen": "^4.3.1",
-        "commitlint": "^19.5.0",
+        "commitlint": "^19.8.1",
         "commitlint-config-gitmoji": "^2.3.1",
         "cz-customizable": "^7.2.1",
         "husky": "^9.1.7",
