@@ -47,9 +47,10 @@ export default async function Home() {
                             asChild
                         >
                             <Link
-                                href={'/my-resume.pdf'}
+                                href={
+                                    'https://drive.google.com/drive/folders/1UxmeOd4qgjzUKwwSE4lB6oybSnD9CxpR?usp=drive_link'
+                                }
                                 target='_blank'
-                                download={true}
                             >
                                 Download CV
                             </Link>
