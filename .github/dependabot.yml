@@ -12,6 +12,9 @@ updates:
       open-pull-requests-limit: 10
       commit-message:
           prefix: 'deps'
-      # Enable auto-merge
+      # Enable auto-merge for all dependency updates
       allow:
           - dependency-type: all
+      # Set auto-merge strategy (squash, merge, or rebase)
+      commit-message:
+          prefix: "deps"
