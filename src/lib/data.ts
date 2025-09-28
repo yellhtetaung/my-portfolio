@@ -43,7 +43,6 @@ export const navItems = [
     { title: 'Home', link: '/' },
     { title: 'Skills', link: '/skills' },
     { title: 'Projects', link: '/projects' },
-    // { title: 'Articles', link: 'https://yellhtetaung.gitbook.io/react/' },
     { title: 'Articles', link: '/articles' },
     { title: 'Uses', link: '/uses' },
 ] as const;
@@ -203,6 +202,9 @@ export const tags = [
     { title: 'Next.js', link: 'next.js' },
     { title: 'React', link: 'react' },
     { title: 'React Native', link: 'reactnative' },
+    { title: 'C#', link: 'csharp' },
+    { title: 'Java', link: 'java' },
+    { title: 'Kotlin', link: 'kotlin' },
 ];
 
 export const projects = [
@@ -329,8 +331,15 @@ export const projects = [
         title: 'Standing Desk',
         image: '/projects/standing-desk.png',
         link: 'https://standing-desk-pi.vercel.app/',
-        sourceCode: null,
+        sourceCode: 'https://github.com/yellhtetaung/standing-desk',
         tag: ['HTML', 'CSS'],
+    },
+    {
+        title: 'Fitness Tracker',
+        image: '/projects/TraninerDashboard.PNG',
+        link: null,
+        sourceCode: 'https://github.com/yellhtetaung/FitnessTracker',
+        tag: ['Csharp', 'Window Form'],
     },
 ] as const;
 
