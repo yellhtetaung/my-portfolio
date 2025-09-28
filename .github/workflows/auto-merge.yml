@@ -1,14 +1,13 @@
-name: Auto Merge Dependabot PR
+name: Dependabot PR Auto-Handle
 
 on:
     workflow_run:
-        workflows: ['Deploy'] # <-- replace with your actual deploy workflow name
+        workflows: ['Deploy'] # <-- replace with your actual Vercel deploy workflow name
         types:
             - completed
 
 jobs:
-    automerge:
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    handle_dependabot_pr:
         runs-on: ubuntu-latest
         permissions:
             contents: write
@@ -21,9 +20,19 @@ jobs:
                   pr_number=$(jq '.[0].number' <<< "${{ toJson(github.event.workflow_run.pull_requests) }}")
                   echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
 
-            - name: Enable auto-merge (squash)
+            - name: Auto-merge if deploy succeeded
+              if: ${{ github.event.workflow_run.conclusion == 'success' }}
               uses: peter-evans/enable-pull-request-automerge@v3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   pull-request-number: ${{ steps.extract.outputs.pr_number }}
                   merge-method: squash
+
+            - name: Close PR if deploy failed
+              if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+              run: |
+                  gh pr close ${{ steps.extract.outputs.pr_number }} \
+                    --repo $GITHUB_REPOSITORY \
+                    --comment "Closing because Vercel deployment failed."
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
