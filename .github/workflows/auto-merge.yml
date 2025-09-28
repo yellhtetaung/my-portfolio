@@ -2,7 +2,7 @@ name: Auto Merge Dependabot PR
 
 on:
     workflow_run:
-        workflows: ['Deploy'] # <-- your deployment workflow name
+        workflows: ['Deploy'] # <-- replace with your actual deploy workflow name
         types:
             - completed
 
@@ -15,9 +15,15 @@ jobs:
             pull-requests: write
 
         steps:
-            - name: Auto-merge Dependabot PRs
+            - name: Get PR number from triggering workflow
+              id: extract
+              run: |
+                  pr_number=$(jq '.[0].number' <<< "${{ toJson(github.event.workflow_run.pull_requests) }}")
+                  echo "pr_number=$pr_number" >> $GITHUB_OUTPUT
+
+            - name: Enable auto-merge (squash)
               uses: peter-evans/enable-pull-request-automerge@v3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  pull-request-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+                  pull-request-number: ${{ steps.extract.outputs.pr_number }}
                   merge-method: squash
