@@ -18,3 +18,11 @@ updates:
       # Set auto-merge strategy (squash, merge, or rebase)
       commit-message:
           prefix: "deps"
+      registries:
+        - npm-registry
+
+registries:
+  npm-registry:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    token: ${{secrets.NPM_TOKEN}}
