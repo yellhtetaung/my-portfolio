@@ -8,10 +8,14 @@ import { Badge } from '@/components/ui/badge';
 import { projects } from '@/lib/data';
 import { Separator } from '@/components/ui/separator';
 
-export default function ProjectByTags({ params }: { params: { slug: string } }) {
+export default async function ProjectByTags({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+
     const filteredProjects = projects
         .filter(value => {
-            const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === params.slug.toLowerCase());
+            const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === slug?.toLowerCase());
+
+            console.log(slug);
 
             if (result) return result;
 
@@ -51,7 +55,7 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                                 <Badge
                                     key={tag}
                                     variant={
-                                        tag.split(' ').join('').toLowerCase() === params.slug.toLowerCase()
+                                        tag.split(' ').join('').toLowerCase() === slug.toLowerCase()
                                             ? 'default'
                                             : 'secondary'
                                     }
@@ -65,7 +69,7 @@ export default function ProjectByTags({ params }: { params: { slug: string } }) 
                     <Separator className='my-4' />
 
                     <CardFooter className='flex justify-between items-center'>
-                        {project.link && project.link !== null && (
+                        {project.link && (
                             <Button
                                 variant={'secondary'}
                                 asChild
