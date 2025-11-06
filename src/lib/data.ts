@@ -68,7 +68,7 @@ export const educations = [
             'JS L2 ( JavaScript Small Projects )',
         ],
     },
-    { school: 'KMD Institute', courses: ['Level4 Diploma In Computing (L4DC) • NCC Education (UK)'] },
+    { school: 'KMD Institute', courses: ['Level 4 Diploma In Computing (L4DC) • NCC Education (UK)', 'Level 5 Diploma In Computing (L4DC) • NCC Education (UK)'] },
 ] as const;
 
 export const experiences = [

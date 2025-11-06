@@ -15,8 +15,6 @@ export default async function ProjectByTags({ params }: { params: Promise<{ slug
         .filter(value => {
             const result = value.tag.find(item => item.split(' ').join('').toLowerCase() === slug?.toLowerCase());
 
-            console.log(slug);
-
             if (result) return result;
 
             return;
